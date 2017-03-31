@@ -15,15 +15,20 @@ extern NSString *const HWCollectionElementKindSectionDecoration;
 
 @protocol HWCollectionViewWaterfallLayoutDelegate <NSObject>
 @optional
+//item size
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
-
+//Footer Insets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForFooterSectionAtIndex:(NSInteger)section;
+//Header Insets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForHeaderSectionAtIndex:(NSInteger)section;
+//item Insets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
-//组与组的最小距离
+//section to section spacint
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
-//组头高度
+//header height
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
-//组尾高度
+//footer height
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
 @end
 
@@ -31,6 +36,9 @@ extern NSString *const HWCollectionElementKindSectionDecoration;
 
 @interface HWCollectionViewWaterfallLayout : UICollectionViewLayout
 @property (nonatomic) UIEdgeInsets itemInsets;
+@property (nonatomic) UIEdgeInsets headerInsets;
+@property (nonatomic) UIEdgeInsets footerInsets;
+
 @property (nonatomic) CGSize itemSize;
 @property (nonatomic) CGFloat interItemSpacingY;
 @property (nonatomic) NSInteger numberOfColumns;

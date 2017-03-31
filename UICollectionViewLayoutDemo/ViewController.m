@@ -130,6 +130,25 @@ static NSString * const PhotoFooterIdentifier = @"PhotoFooterIdentifier";
     }
     return nil;
 }
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        return CGSizeMake([UIScreen mainScreen].bounds.size.width, 40);
+    }
+    return CGSizeMake([UIScreen mainScreen].bounds.size.width, 90);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0 && indexPath.row == 3) {
+        return UIEdgeInsetsMake(2, 4, 2, 5);
+    }
+    return UIEdgeInsetsMake(0, 0, 1, 0);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForHeaderSectionAtIndex:(NSInteger)section{
+
+    if (section == 2) {
+        return UIEdgeInsetsMake(10, 10, 10, 10);
+    }
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     cell.highlighted = NO;
