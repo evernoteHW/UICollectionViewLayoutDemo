@@ -41,6 +41,11 @@
 		5F2FF2551E8EF2D400191950 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FF23F1E8EF2D400191950 /* UIScrollView+MJExtension.m */; };
 		5F2FF2561E8EF2D400191950 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FF2411E8EF2D400191950 /* UIScrollView+MJRefresh.m */; };
 		5F2FF2571E8EF2D400191950 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FF2431E8EF2D400191950 /* UIView+MJExtension.m */; };
+		74B4E8C81E8F9B4D0056C46F /* HWCollectionReusableDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4E8C31E8F9B4D0056C46F /* HWCollectionReusableDecorationView.swift */; };
+		74B4E8C91E8F9B4D0056C46F /* HWCollectionReusableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4E8C41E8F9B4D0056C46F /* HWCollectionReusableFooterView.swift */; };
+		74B4E8CA1E8F9B4D0056C46F /* HWCollectionReusableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4E8C51E8F9B4D0056C46F /* HWCollectionReusableHeaderView.swift */; };
+		74B4E8CB1E8F9B4D0056C46F /* HWCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4E8C61E8F9B4D0056C46F /* HWCollectionViewWaterfallLayout.swift */; };
+		74B4E8CC1E8F9B4D0056C46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4E8C71E8F9B4D0056C46F /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +134,12 @@
 		5F2FF2411E8EF2D400191950 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		5F2FF2421E8EF2D400191950 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		5F2FF2431E8EF2D400191950 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		74B4E8C21E8F9B4C0056C46F /* UICollectionViewLayoutDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLayoutDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		74B4E8C31E8F9B4D0056C46F /* HWCollectionReusableDecorationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionReusableDecorationView.swift; sourceTree = "<group>"; };
+		74B4E8C41E8F9B4D0056C46F /* HWCollectionReusableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionReusableFooterView.swift; sourceTree = "<group>"; };
+		74B4E8C51E8F9B4D0056C46F /* HWCollectionReusableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionReusableHeaderView.swift; sourceTree = "<group>"; };
+		74B4E8C61E8F9B4D0056C46F /* HWCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		74B4E8C71E8F9B4D0056C46F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +194,7 @@
 				5F2FF1D31E8EF2B700191950 /* AppDelegate.m */,
 				5F2FF1D51E8EF2B700191950 /* ViewController.h */,
 				5F2FF1D61E8EF2B700191950 /* ViewController.m */,
+				74B4E8C11E8F9B450056C46F /* Swift版本 */,
 				5F2FF2151E8EF2D400191950 /* MJRefresh */,
 				5F2FF2021E8EF2CD00191950 /* ProductCollectionViewCell */,
 				5F2FF1D81E8EF2B700191950 /* Main.storyboard */,
@@ -334,6 +346,19 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		74B4E8C11E8F9B450056C46F /* Swift版本 */ = {
+			isa = PBXGroup;
+			children = (
+				74B4E8C31E8F9B4D0056C46F /* HWCollectionReusableDecorationView.swift */,
+				74B4E8C41E8F9B4D0056C46F /* HWCollectionReusableFooterView.swift */,
+				74B4E8C51E8F9B4D0056C46F /* HWCollectionReusableHeaderView.swift */,
+				74B4E8C61E8F9B4D0056C46F /* HWCollectionViewWaterfallLayout.swift */,
+				74B4E8C71E8F9B4D0056C46F /* ViewController.swift */,
+				74B4E8C21E8F9B4C0056C46F /* UICollectionViewLayoutDemo-Bridging-Header.h */,
+			);
+			path = "Swift版本";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +427,7 @@
 					5F2FF1CB1E8EF2B700191950 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 38ZQL3RGUG;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5F2FF1E41E8EF2B800191950 = {
@@ -477,13 +503,16 @@
 				5F2FF2571E8EF2D400191950 /* UIView+MJExtension.m in Sources */,
 				5F2FF24F1E8EF2D400191950 /* MJRefreshGifHeader.m in Sources */,
 				5F2FF1D71E8EF2B700191950 /* ViewController.m in Sources */,
+				74B4E8CB1E8F9B4D0056C46F /* HWCollectionViewWaterfallLayout.swift in Sources */,
 				5F2FF2561E8EF2D400191950 /* UIScrollView+MJRefresh.m in Sources */,
 				5F2FF20F1E8EF2CD00191950 /* DemoView.m in Sources */,
 				5F2FF2481E8EF2D400191950 /* MJRefreshHeader.m in Sources */,
 				5F2FF2451E8EF2D400191950 /* MJRefreshBackFooter.m in Sources */,
 				5F2FF2531E8EF2D400191950 /* MJRefreshConst.m in Sources */,
+				74B4E8CA1E8F9B4D0056C46F /* HWCollectionReusableHeaderView.swift in Sources */,
 				5F2FF2131E8EF2CD00191950 /* PJProductCollectionViewCell.m in Sources */,
 				5F2FF2111E8EF2CD00191950 /* PJCollectionReusableFooterView.m in Sources */,
+				74B4E8CC1E8F9B4D0056C46F /* ViewController.swift in Sources */,
 				5F2FF2491E8EF2D400191950 /* MJRefreshAutoGifFooter.m in Sources */,
 				5F2FF2141E8EF2CD00191950 /* PJProductDecorationView.m in Sources */,
 				5F2FF2541E8EF2D400191950 /* NSBundle+MJRefresh.m in Sources */,
@@ -492,12 +521,14 @@
 				5F2FF2471E8EF2D400191950 /* MJRefreshFooter.m in Sources */,
 				5F2FF2461E8EF2D400191950 /* MJRefreshComponent.m in Sources */,
 				5F2FF24C1E8EF2D400191950 /* MJRefreshBackGifFooter.m in Sources */,
+				74B4E8C91E8F9B4D0056C46F /* HWCollectionReusableFooterView.swift in Sources */,
 				5F2FF2121E8EF2CD00191950 /* PJCollectionReusableHeaderView.m in Sources */,
 				5F2FF2511E8EF2D400191950 /* MJRefreshStateHeader.m in Sources */,
 				5F2FF24E1E8EF2D400191950 /* MJRefreshBackStateFooter.m in Sources */,
 				5F2FF2501E8EF2D400191950 /* MJRefreshNormalHeader.m in Sources */,
 				5F2FF24A1E8EF2D400191950 /* MJRefreshAutoNormalFooter.m in Sources */,
 				5F2FF1D41E8EF2B700191950 /* AppDelegate.m in Sources */,
+				74B4E8C81E8F9B4D0056C46F /* HWCollectionReusableDecorationView.swift in Sources */,
 				5F2FF1D11E8EF2B700191950 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,11 +676,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alibaba.UICollectionViewLayoutDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UICollectionViewLayoutDemo/Swift版本/UICollectionViewLayoutDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -657,17 +692,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alibaba.UICollectionViewLayoutDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UICollectionViewLayoutDemo/Swift版本/UICollectionViewLayoutDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		5F2FF1FD1E8EF2B800191950 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemoTests/Info.plist;
@@ -681,6 +720,7 @@
 		5F2FF1FE1E8EF2B800191950 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemoTests/Info.plist;
@@ -694,6 +734,7 @@
 		5F2FF2001E8EF2B800191950 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -706,6 +747,7 @@
 		5F2FF2011E8EF2B800191950 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 38ZQL3RGUG;
 				INFOPLIST_FILE = UICollectionViewLayoutDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -734,6 +776,7 @@
 				5F2FF1FB1E8EF2B800191950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F2FF1FC1E8EF2B800191950 /* Build configuration list for PBXNativeTarget "UICollectionViewLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -742,6 +785,7 @@
 				5F2FF1FE1E8EF2B800191950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F2FF1FF1E8EF2B800191950 /* Build configuration list for PBXNativeTarget "UICollectionViewLayoutDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +794,7 @@
 				5F2FF2011E8EF2B800191950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
