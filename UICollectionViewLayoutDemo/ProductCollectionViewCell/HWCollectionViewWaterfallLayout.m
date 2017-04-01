@@ -103,7 +103,7 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
     NSInteger sectionCount = [self.collectionView numberOfSections];
     
     //CollectionHeaderView
-  
+    
     CGFloat top = 0.0;
     if (self.collectionView.hw_collectionHeaderView) {
         top += self.collectionView.hw_collectionHeaderView.bounds.size.height;
@@ -119,7 +119,7 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
             headerHeight = [self.layoutDelegate collectionView:self.collectionView layout:self referenceSizeForHeaderInSection:section];
         }
         //header insets
-    
+        
         headerAttributes.frame = CGRectMake(0, top, CGRectGetWidth(self.collectionView.frame), headerHeight);
         headerLayoutInfo[headerIndexPath] = headerAttributes;
         top += headerHeight;
@@ -142,7 +142,7 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
             if ([self.layoutDelegate respondsToSelector:@selector(collectionView:layout:insetForItemAtIndexPath:)]) {
                 itemInsets = [self.layoutDelegate collectionView:self.collectionView layout:self insetForItemAtIndexPath:indexPath];
             }
-        
+            
             //item frame
             CGFloat item_x = itemInsets.left;
             CGFloat item_y = top + itemHeight + itemInsets.top;
@@ -171,12 +171,17 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
         
         top += footerHeight;
         
+        UIEdgeInsets decorationInsets = self.decorationInsets;
+        if ([self.layoutDelegate respondsToSelector:@selector(collectionView:layout:insetForDecorationSectionAtIndex:)]) {
+            decorationInsets = [self.layoutDelegate collectionView:self.collectionView layout:self insetForDecorationSectionAtIndex:section];
+        }
+        
         //Decoration frame
         NSIndexPath *decorationIndexPath = [NSIndexPath indexPathForItem:0 inSection:section];
         UICollectionViewLayoutAttributes *decorationAttributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:HWCollectionElementKindSectionDecoration withIndexPath:decorationIndexPath];
         CGFloat decorationHeight = CGRectGetMaxY(footerAttributes.frame) - CGRectGetMinY(headerAttributes.frame);
         
-        decorationAttributes.frame = CGRectMake(0, CGRectGetMinY(headerAttributes.frame),CGRectGetWidth(self.collectionView.frame), decorationHeight);
+        decorationAttributes.frame = CGRectMake(decorationInsets.left, CGRectGetMinY(headerAttributes.frame) + decorationInsets.top,CGRectGetWidth(self.collectionView.frame) - decorationInsets.left - decorationInsets.right, decorationHeight - decorationInsets.top - decorationInsets.bottom);
         decorationAttributes.zIndex = -1;
         decorationLayoutInfo[decorationIndexPath] = decorationAttributes;
         
@@ -229,7 +234,7 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
         footAttributes = self.layoutInfo[HWLayoutFooterKind][[NSIndexPath indexPathForRow:numberOfItemsInSection - 1 inSection:sectionCount - 1]];
     }else{
         footAttributes = self.layoutInfo[HWLayoutItemCellKind][[NSIndexPath indexPathForRow:numberOfItemsInSection - 1 inSection:sectionCount - 1]];
-    
+        
     }
     CGFloat height = CGRectGetMaxY(footAttributes.frame);
     if (self.collectionView.hw_collectionFooterView) {

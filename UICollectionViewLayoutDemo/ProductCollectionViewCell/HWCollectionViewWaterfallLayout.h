@@ -23,6 +23,8 @@ extern NSString *const HWCollectionElementKindSectionDecoration;
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForHeaderSectionAtIndex:(NSInteger)section;
 //item Insets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForItemAtIndexPath:(NSIndexPath *)indexPath;
+//decoration Insets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout insetForDecorationSectionAtIndex:(NSInteger)section;
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
 //section to section spacint
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(HWCollectionViewWaterfallLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
@@ -38,6 +40,7 @@ extern NSString *const HWCollectionElementKindSectionDecoration;
 @property (nonatomic) UIEdgeInsets itemInsets;
 @property (nonatomic) UIEdgeInsets headerInsets;
 @property (nonatomic) UIEdgeInsets footerInsets;
+@property (nonatomic) UIEdgeInsets decorationInsets;
 
 @property (nonatomic) CGSize itemSize;
 @property (nonatomic) CGFloat interItemSpacingY;
