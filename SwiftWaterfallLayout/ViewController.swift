@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     struct Identfier {
         static let header: String = "header"
         static let footer: String = "footer"
@@ -22,12 +22,12 @@ class ViewController: UIViewController {
         
         self.view .addSubview(colletionView)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     lazy var colletionView:UICollectionView = {[unowned self] in
         let colletionView: UICollectionView = UICollectionView(frame:self.view.bounds, collectionViewLayout:self.layout)
         colletionView.dataSource = self;
@@ -35,11 +35,21 @@ class ViewController: UIViewController {
         colletionView.translatesAutoresizingMaskIntoConstraints = false;
         colletionView.backgroundColor = .white
         colletionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identfier.cell)
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.red
+        headerView.frame = CGRect(x: 0,y: 0,width: 375, height: 50)
+        colletionView.hw_collectionHeaderView = headerView
+        
+        let footerView = UIView()
+        footerView.backgroundColor = UIColor.green
+        footerView.frame = CGRect(x: 0,y: 0,width: 375, height: 50)
+        colletionView.hw_collectionFooterView = footerView
+        
         colletionView.register(HWCollectionReusableHeaderView.self, forSupplementaryViewOfKind: HWCollectionElementKindSection.header, withReuseIdentifier: Identfier.header)
         colletionView.register(HWCollectionReusableFooterView.self, forSupplementaryViewOfKind: HWCollectionElementKindSection.footer, withReuseIdentifier: Identfier.footer)
         return colletionView
-    }()
-
+        }()
+    
     lazy var layout:HWCollectionViewWaterfallLayout = {[unowned self] in
         let layout = HWCollectionViewWaterfallLayout()
         layout.itemInsets = UIEdgeInsetsMake(0, 0, 1, 0);
@@ -47,15 +57,15 @@ class ViewController: UIViewController {
         layout.headerHeight = 150;
         layout.footerHeight = 100;
         return layout;
-    }()
+        }()
 }
 extension ViewController: HWCollectionViewWaterfallLayoutDelegate{
-
+    
 }
 extension ViewController: UICollectionViewDataSource{
-
-    public func numberOfSections(in collectionView: UICollectionView) -> Int{
     
+    public func numberOfSections(in collectionView: UICollectionView) -> Int{
+        
         return 4;
     }
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{

@@ -108,6 +108,8 @@ static NSString * const HWLayoutDecorationKind = @"HWLayoutDecorationKind";
     if (self.collectionView.hw_collectionHeaderView) {
         top += self.collectionView.hw_collectionHeaderView.bounds.size.height;
     }
+    NSLog(@"%@",NSStringFromCGRect(self.collectionView.hw_collectionHeaderView.frame));
+    
     for (NSInteger section = 0; section < sectionCount; section++) {
         NSInteger itemCount = [self.collectionView numberOfItemsInSection:section];
         

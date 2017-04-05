@@ -30,13 +30,13 @@ static NSString * const PhotoFooterIdentifier = @"PhotoFooterIdentifier";
     layout.layoutDelegate = self;
     layout.itemInsets = UIEdgeInsetsMake(0, 0, 1, 0);
     layout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 90.0);
-    //    layout.headerHeight = 100;
-    //    layout.footerHeight = 100;
-    
+//        layout.headerHeight = 100;
+//        layout.footerHeight = 100;
+//    
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor purpleColor];
     
     DemoView *button = [DemoView buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor greenColor];
@@ -44,6 +44,7 @@ static NSString * const PhotoFooterIdentifier = @"PhotoFooterIdentifier";
     [button addTarget:self action:@selector(ddd) forControlEvents:UIControlEventTouchUpInside];
     self.collectionView.hw_collectionHeaderView = button;
     
+//    [self.collectionView addSubview:button];
     
     DemoView *footerView = [DemoView buttonWithType:UIButtonTypeCustom];
     footerView.backgroundColor = [UIColor greenColor];
@@ -57,14 +58,14 @@ static NSString * const PhotoFooterIdentifier = @"PhotoFooterIdentifier";
     [self.collectionView registerClass:[PJCollectionReusableFooterView class] forSupplementaryViewOfKind:HWCollectionElementKindSectionFooter withReuseIdentifier:PhotoFooterIdentifier];
     
     [self.view addSubview:self.collectionView];
-    
-    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //        DemoView *button = [DemoView buttonWithType:UIButtonTypeCustom];
-    //        button.backgroundColor = [UIColor yellowColor];
-    //        button.frame = CGRectMake(0, 0, 375, 200);
-    //        [button addTarget:self action:@selector(ddd) forControlEvents:UIControlEventTouchUpInside];
-    //        self.collectionView.pjCollectionHeaderView = button;
-    //    });
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        DemoView *button = [DemoView buttonWithType:UIButtonTypeCustom];
+//        button.backgroundColor = [UIColor yellowColor];
+//        button.frame = CGRectMake(0, 0, 375, 200);
+//        [button addTarget:self action:@selector(ddd) forControlEvents:UIControlEventTouchUpInside];
+//        self.collectionView.hw_collectionHeaderView = button;
+//    });
     //
     //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     //        DemoView *button = [DemoView buttonWithType:UIButtonTypeCustom];
