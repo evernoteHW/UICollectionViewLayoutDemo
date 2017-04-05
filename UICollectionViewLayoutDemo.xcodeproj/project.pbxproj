@@ -175,6 +175,10 @@
 		5F376BD91E952F680035EA40 /* HWCollectionReusableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionReusableFooterView.swift; sourceTree = "<group>"; };
 		5F376BDA1E952F680035EA40 /* HWCollectionReusableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionReusableHeaderView.swift; sourceTree = "<group>"; };
 		5F376BDB1E952F680035EA40 /* HWCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		5F5FC6D61E9535030067CBCC /* HWCollectionViewGridLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCollectionViewGridLayoutTests.m; sourceTree = "<group>"; };
+		5F5FC6D81E9535030067CBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F5FC6E11E9535030067CBCC /* HWCollectionViewGridLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCollectionViewGridLayoutUITests.m; sourceTree = "<group>"; };
+		5F5FC6E31E9535030067CBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,8 @@
 				5F376BAA1E952F220035EA40 /* SwiftWaterfallLayout */,
 				5F376BBF1E952F230035EA40 /* SwiftWaterfallLayoutTests */,
 				5F376BCA1E952F230035EA40 /* SwiftWaterfallLayoutUITests */,
+				5F5FC6D51E9535030067CBCC /* HWCollectionViewGridLayoutTests */,
+				5F5FC6E01E9535030067CBCC /* HWCollectionViewGridLayoutUITests */,
 				5F2FF1CD1E8EF2B700191950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -468,6 +474,24 @@
 				5F376BDB1E952F680035EA40 /* HWCollectionViewWaterfallLayout.swift */,
 			);
 			path = WaterfallLayout;
+			sourceTree = "<group>";
+		};
+		5F5FC6D51E9535030067CBCC /* HWCollectionViewGridLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F5FC6D61E9535030067CBCC /* HWCollectionViewGridLayoutTests.m */,
+				5F5FC6D81E9535030067CBCC /* Info.plist */,
+			);
+			path = HWCollectionViewGridLayoutTests;
+			sourceTree = "<group>";
+		};
+		5F5FC6E01E9535030067CBCC /* HWCollectionViewGridLayoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F5FC6E11E9535030067CBCC /* HWCollectionViewGridLayoutUITests.m */,
+				5F5FC6E31E9535030067CBCC /* Info.plist */,
+			);
+			path = HWCollectionViewGridLayoutUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1151,6 +1175,7 @@
 				5F376BCF1E952F230035EA40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F376BD51E952F230035EA40 /* Build configuration list for PBXNativeTarget "SwiftWaterfallLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -1159,6 +1184,7 @@
 				5F376BD11E952F230035EA40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F376BD61E952F230035EA40 /* Build configuration list for PBXNativeTarget "SwiftWaterfallLayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -1167,6 +1193,7 @@
 				5F376BD31E952F230035EA40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
